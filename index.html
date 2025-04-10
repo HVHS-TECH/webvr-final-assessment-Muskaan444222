@@ -12,3 +12,88 @@
 </html>
 
 
+<!DOCTYPE html>
+<html>
+  <head>
+
+<script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script> 
+
+  </head>
+    <body>
+    <a-scene>
+      <a-sky color="lightblue"></a-sky>
+      
+      <a-entity 
+      ply-model="src:Voxel dog.ply"
+      position="0 0 -2"
+      rotation="-180 -45 -180"
+      scale="10 10 10"
+      ></a-entity>
+
+      <a-Sky 
+        color=lightblue
+    ></a-sky>
+
+    
+<!-- ground - Oops, it's upside down!, check the rotation-->
+    <a-plane
+        scale="50 50"
+        color="yellow"
+        rotation="-90 0 0" 
+    ></a-plane> 
+    
+    
+    <a-sphere 
+        position="-9 -2 -13"
+        color="mediumseagreen"
+        scale="5.340 3.900 8.430"
+    ></a-sphere>        
+    <a-sphere 
+        position="9 -2 -13"
+        color="mediumseagreen"
+        scale="8 4 8"
+    ></a-sphere> 
+                 
+    <a-sphere 
+        position="-0.251 0.182 -5.428"
+        color="orange"
+        scale="0.2 0.2 0.2"
+    ></a-sphere> 
+
+    <a-box 
+        position="-3.025 0.024 -7.339"
+        color="blue"
+        rotation="0 -45 0"
+        scale="4.850 -0.060 2.640"
+    ></a-box>
+
+    <a-sphere 
+        position="2.570 1.305 -7.400"
+        color="pink"
+        scale="-0.090 1.120 0.330"
+    ></a-sphere> 
+
+    <a-cylinder 
+        position="-2.870 0.190 -7.630"
+        color="red"
+        rotation="0 0 180"
+        scale="0.160 0.430 0.120"
+    ></a-cylinder>
+
+    <a-cylinder 
+        position="-2.440 0.190 -7.630"
+        color="red"
+        rotation="0 0 180"
+        scale="0.110 0.200 0.120"
+    ></a-cylinder>
+
+    <a-cylinder 
+        position="-3.672 0.138 -7.154"
+        color="red"
+        rotation="0 0 180"
+        scale="0.160 0.200 0.290"
+    ></a-cylinder>
+    </a-scene>
+  </body>
+</html>
