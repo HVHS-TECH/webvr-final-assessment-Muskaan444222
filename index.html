@@ -24,32 +24,46 @@
     <a-scene>
       <a-sky color="lightblue"></a-sky>
       
+      <!--voxel things, all by Muskaan-->
       <a-entity 
       ply-model="src:Voxel dog.ply"
-      position="0 0 -2"
-      rotation="-180 -45 -180"
-      scale="10 10 10"
+      position="4.345 -3.900 -0.103"
+      rotation="-93.210 -62.960 -287.93"
+      scale="3.050 2.350 2.130"
       ></a-entity>
-
+    
+      <!--left hand tree, by Muskaan-->
       <a-entity 
       ply-model="src:palm tree.ply"
-      position="0 0 -2"
-      rotation="180 -45 180"
-      scale="10 10 10"
+      position="-10.056 -14.303 -10.441"
+      rotation="-86.740 0 -90"
+      scale="5.360 8.800 7.010"
       ></a-entity>
-      <a-Sky 
-        color=lightblue
-    ></a-sky>
+     
+      <!--right hand tree, by Muskaan-->
+      <a-entity 
+      ply-model="src:palm tree.ply"
+      position="2.334 -13.245 -12.531"
+      rotation="-86.740 0 -90"
+      scale="3.380 4.810 7.010"
+      ></a-entity>
+      
+      <!--unbrella for shade, by Muskaan-->
+      <a-entity 
+      ply-model="src:umbrella.ply"
+      position="-4.736 -14.033 14"
+      rotation="-88.660 0 -90"
+      scale="-10.940 -8.820 6.800"
+      ></a-entity>
 
-    
-<!-- ground - Oops, it's upside down!, check the rotation-->
+    <!--sand-->
     <a-plane
         scale="50 50"
         color="yellow"
         rotation="-90 0 0" 
     ></a-plane> 
     
-    
+    <!--green sea beds-->
     <a-sphere 
         position="-9 -2 -13"
         color="mediumseagreen"
@@ -60,26 +74,59 @@
         color="mediumseagreen"
         scale="8 4 8"
     ></a-sphere> 
-                 
+     
+    <!--moving basketball-->
     <a-sphere 
         position="-0.251 0.182 -5.428"
         color="orange"
         scale="0.2 0.2 0.2"
+        animation="
+        property:  position;
+        from: -0.251 0.182 -5.428;
+        to: 4 0.182 -5.428;
+        dur: 4000;
+        loop: true;
+        dir: alternate;
+        "
     ></a-sphere> 
+   
+    <!--sea moving forwards and backwards-->
+    <a-box 
+    position="0.190 0.034 -17.960"
+    color="blue"
+    rotation="0 0 0"
+    scale="50.000 -0.060  11.770"
+    animation="
+    property: position;
+    from: -1.079 0.144 -18.536;
+    to: -1.079 0.144 -16;
+    loop: true;
+    dir: alternate;
+    dur: 4000;
+    "
+    ></a-box>
+   <!--a shark fin in the water. just a thought-->
+    <a-triangle
+    position="0.525 -0.424 -19.903"
+    color="grey"
+    scale="-5.810 2.550 0.350"
+    animation="
+    property: position;
+    from: 0.525 -0.424 -19.903;
+    to: -0.525 -0.424 -19.903;
+    loop: true;
+    dir: alternate;"
+    ></a-triangle> 
 
+   <!--blanket on beach with picnic food-->
     <a-box 
         position="-3.025 0.024 -7.339"
-        color="blue"
+        color="green"
         rotation="0 -45 0"
         scale="4.850 -0.060 2.640"
     ></a-box>
-
-    <a-sphere 
-        position="2.570 1.305 -7.400"
-        color="pink"
-        scale="-0.090 1.120 0.330"
-    ></a-sphere> 
-
+     
+    <!--food for the picnic-->
     <a-cylinder 
         position="-2.870 0.190 -7.630"
         color="red"
@@ -100,6 +147,9 @@
         rotation="0 0 180"
         scale="0.160 0.200 0.290"
     ></a-cylinder>
+
+    
+
     </a-scene>
   </body>
 </html>
