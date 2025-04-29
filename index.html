@@ -38,6 +38,8 @@
       light="castShadow: true">
       </a-light>
 
+      
+      <!--sun that moves so we can have shadow-->
       <a-circle 
         position="-8.160 6.457 -2.520"
         color="gold"
@@ -209,7 +211,9 @@
         rotation="0 0 180"
         scale="0.160 0.200 0.290"
     ></a-cylinder>
+    
 
+    <a-entity position="-1.255 0.123 2.547" camera wasd-controls look-controls animation="property:position; to: 0 2.203 -0.068; dur: 10000"></a-entity>
     
   </a-scene>
   </body>
