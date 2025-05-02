@@ -5,219 +5,239 @@
 </head>
 <body>
 
+
 <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
+
 
 </body>
 </html>
 
 
+
+
 <!DOCTYPE html>
 <html>
-  <head>
+ <head>
+
 
 <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script> 
-
-  </head>
-    <body>
-    <a-scene>
-      <a-sky color="lightblue"></a-sky>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
 
 
-      <a-light id="amb" type="ambient" intensity="0.5" ></a-light>
+ </head>
+   <body>
+   <a-scene>
+     <a-sky color="lightblue"></a-sky>
 
-      <a-light id="dir" type="directional" 
-      animation="
-        property:  position;
-        from: -8.160 6.457 -2.520;
-        to: 8 12 -10;
-        dur: 16000;
-        "
-      color="white" 
-      light="castShadow: true">
-      </a-light>
 
-      
-      <!--sun that moves so we can have shadow-->
-      <a-circle 
-        position="-8.160 6.457 -2.520"
-        color="gold"
-        scale="0.5 0.5 0.5"
-        animation="
-        property:  position;
-        from: -8.160 6.5 -2.520;
-        to: 8 12 -10;
-        dur: 16000;
-        "
-    ></a-circle> 
 
-      <!--voxel things, all by Muskaan-->
-      <a-entity 
-      ply-model="src:Voxel dog.ply"
-      position="-5.557 -1.167 -5.403"
-      rotation="-93.210 -254.45 -287.93"
-      scale="0.89 -1.03 0.61"
-      shadow="cast: true"
-      animation="
-      property: position;
-      from: -5.557 -1.167 -5.403;
-      to: -5.557 -1.167 5.403;
-      dur: 8000; 
-      delay:  8000;"
-      ></a-entity>
+
+     <a-light id="amb" type="ambient" intensity="0.5" ></a-light>
+
+
+     <a-light id="dir" type="directional"
+     animation="
+       property:  position;
+       from: -8.160 6.457 -2.520;
+       to: 8 12 -10;
+       dur: 16000;
+       "
+     color="white"
+     light="castShadow: true">
+     </a-light>
+
+
     
-      <!--left hand tree, by Muskaan-->
-      <a-entity 
-      ply-model="src:palm tree.ply"
-      position="-10.056 -14.303 -10.441"
-      rotation="-86.740 0 -90"
-      scale="5.360 8.800 7.010"
-      shadow="cast: true"
-      ></a-entity>
-     
-      <!--right hand tree, by Muskaan-->
-      <a-entity 
-      ply-model="src:palm tree.ply"
-      position="2.334 -13.245 -12.531"
-      rotation="-86.740 0 -90"
-      scale="3.380 4.810 7.010"
-      shadow="cast: true"
-      ></a-entity>
-      
-      <!--unbrella for shade, by Muskaan-->
-      <a-entity 
-      ply-model="src:umbrella.ply"
-      position="-4.736 -14.033 14"
-      rotation="-88.660 0 -90"
-      scale="-10.940 -8.820 6.800"
-      shadow="cast: true"
-      ></a-entity>
+     <!--sun that moves so we can have shadow-->
+     <a-circle
+       position="-8.160 6.457 -2.520"
+       color="gold"
+       scale="0.5 0.5 0.5"
+       animation="
+       property:  position;
+       from: -8.160 6.5 -2.520;
+       to: 8 12 -10;
+       dur: 16000;
+       "
+   ></a-circle>
 
-    <!--sand-->
-    <a-plane
-        scale="50 50"
-        color="yellow"
-        rotation="-90 0 0" 
-        shadow="receive: true"
-    ></a-plane> 
+
+     <!--voxel things, all by Muskaan-->
+     <a-entity
+     ply-model="src:Voxel dog.ply"
+     position="-5.557 -1.167 -5.403"
+     rotation="-93.210 -254.45 -287.93"
+     scale="0.89 -1.03 0.61"
+     shadow="cast: true"
+     animation="
+     property: position;
+     from: -5.557 -1.167 -5.403;
+     to: -5.557 -1.167 5.403;
+     dur: 8000;
+     delay:  16000;"
+     ></a-entity>
+  
+     <!--left hand tree, by Muskaan-->
+     <a-entity
+     ply-model="src:palm tree.ply"
+     position="-10.056 -14.303 -10.441"
+     rotation="-86.740 0 -90"
+     scale="5.360 8.800 7.010"
+     shadow="cast: true"
+     ></a-entity>
+   
+     <!--right hand tree, by Muskaan-->
+     <a-entity
+     ply-model="src:palm tree.ply"
+     position="2.334 -13.245 -12.531"
+     rotation="-86.740 0 -90"
+     scale="3.380 4.810 7.010"
+     shadow="cast: true"
+     ></a-entity>
     
-    <!--green sea beds-->
-    <a-sphere 
-        position="-9 -2 -13"
-        color="mediumseagreen"
-        scale="5.340 3.900 8.430"
-        shadow="receive: true"
-    ></a-sphere>        
-    <a-sphere 
-        position="9 -2 -13"
-        color="mediumseagreen"
-        scale="8 4 8"
-        shadow="receive: true"
-    ></a-sphere> 
-     
-    <!--moving basketball-->
-    <a-sphere 
-        position="-0.251 0.182 -5.428"
-        color="orange"
-        scale="0.2 0.2 0.2"
-        animation="
-        property:  position;
-        from: -0.251 0.182 -5.428;
-        to: 4 0.182 -5.428;
-        dur: 4000;
-        loop: 2;
-        dir: alternate;
-        "
-        shadow="cast: true"
-    ></a-sphere> 
+     <!--unbrella for shade, by Muskaan-->
+     <a-entity
+     ply-model="src:umbrella.ply"
+     position="-4.736 -14.033 14"
+     rotation="-88.660 0 -90"
+     scale="-10.940 -8.820 6.800"
+     shadow="cast: true"
+     ></a-entity>
+
+
+   <!--sand-->
+   <a-plane
+       scale="50 50"
+       color="yellow"
+       rotation="-90 0 0"
+       shadow="receive: true"
+   ></a-plane>
+  
+   <!--green sea beds-->
+   <a-sphere
+       position="-9 -2 -13"
+       color="mediumseagreen"
+       scale="5.340 3.900 8.430"
+       shadow="receive: true"
+   ></a-sphere>       
+   <a-sphere
+       position="9 -2 -13"
+       color="mediumseagreen"
+       scale="8 4 8"
+       shadow="receive: true"
+   ></a-sphere>
    
-   
-    <!--surfboard for surfing-->
-    <a-sphere 
-        position="2.766 1.736 -9.026"
-        color="pink"
+   <!--moving basketball-->
+   <a-sphere
+       position="-0.251 0.182 -5.428"
+       color="orange"
+       scale="0.2 0.2 0.2"
+       animation="
+       property:  position;
+       from: -0.251 0.182 -5.428;
+       to: 4 0.182 -5.428;
+       dur: 4000;
+       loop: 2;
+       dir: alternate;
+       "
+       shadow="cast: true"
+   ></a-sphere>
+ 
+ 
+   <!--surfboard for surfing-->
+   <a-sphere
+       position="3.609 2.061 -10.593"
+       color="pink"
+      rotation="-1.970 4.440 -89.860"
+       scale="1.280 -0.160 0.560"
+       shadow="cast: true"
+   ></a-sphere>
+
+
+
+
+   <a-sphere
+       position="4 0.267 -5.397"
+       color="purple"
        rotation="-1.970 4.440 -89.860"
-        scale="1.440 -0.140 0.550"
-        shadow="cast: true"
-    ></a-sphere> 
+       scale="1.440 -0.140 0.550"
+       shadow="cast: true"
+   ></a-sphere>
+ 
+ 
+ 
+  <!--sea moving forwards and backwards-->
+   <a-box
+   position="0.190 0.034 -17.960"
+   color="blue"
+   rotation="0 0 0"
+   scale="50.000 -0.060  11.770"
+   animation="
+   property: position;
+   from: -1.079 0.144 -18.536;
+   to: -1.079 0.144 -16;
+   loop: true;
+   dir: alternate;
+   dur: 4000;
+   "
+   ></a-box>
+  <!--a shark fin in the water. just a thought-->
+   <a-triangle
+   position="0.525 -0.424 -19.903"
+   color="grey"
+   scale="-5.810 2.550 0.350"
+   animation="
+   property: position;
+   from: 0.525 -0.424 -19.903;
+   to: -0.525 -0.424 -19.903;
+   loop: true;
+   dir: alternate;"
+   ></a-triangle>
 
 
-    <a-sphere 
-        position="4 0.267 -5.397"
-        color="purple"
-        rotation="-1.970 4.440 -89.860"
-        scale="1.440 -0.140 0.550"
-        shadow="cast: true"
-    ></a-sphere> 
+  <!--blanket on beach with picnic food-->
+   <a-box
+       position="-3.025 0.024 -7.339"
+       color="green"
+       rotation="0 -45 0"
+       scale="4.850 -0.060 2.640"
+       shadow="cast: true"
+   ></a-box>
    
-   
-   
-   <!--sea moving forwards and backwards-->
-    <a-box 
-    position="0.190 0.034 -17.960"
-    color="blue"
-    rotation="0 0 0"
-    scale="50.000 -0.060  11.770"
-    animation="
-    property: position;
-    from: -1.079 0.144 -18.536;
-    to: -1.079 0.144 -16;
-    loop: true;
-    dir: alternate;
-    dur: 4000;
-    "
-    ></a-box>
-   <!--a shark fin in the water. just a thought-->
-    <a-triangle
-    position="0.525 -0.424 -19.903"
-    color="grey"
-    scale="-5.810 2.550 0.350"
-    animation="
-    property: position;
-    from: 0.525 -0.424 -19.903;
-    to: -0.525 -0.424 -19.903;
-    loop: true;
-    dir: alternate;"
-    ></a-triangle> 
+   <!--food for the picnic-->
+   <a-cylinder
+       position="-2.870 0.190 -7.630"
+       color="red"
+       rotation="0 0 180"
+       scale="0.160 0.430 0.120"
+   ></a-cylinder>
 
-   <!--blanket on beach with picnic food-->
-    <a-box 
-        position="-3.025 0.024 -7.339"
-        color="green"
-        rotation="0 -45 0"
-        scale="4.850 -0.060 2.640"
-        shadow="cast: true"
-    ></a-box>
-     
-    <!--food for the picnic-->
-    <a-cylinder 
-        position="-2.870 0.190 -7.630"
-        color="red"
-        rotation="0 0 180"
-        scale="0.160 0.430 0.120"
-    ></a-cylinder>
 
-    <a-cylinder 
-        position="-2.440 0.190 -7.630"
-        color="red"
-        rotation="0 0 180"
-        scale="0.110 0.200 0.120"
-    ></a-cylinder>
+   <a-cylinder
+       position="-2.440 0.190 -7.630"
+       color="red"
+       rotation="0 0 180"
+       scale="0.110 0.200 0.120"
+   ></a-cylinder>
 
-    <a-cylinder 
-        position="-3.672 0.138 -7.154"
-        color="red"
-        rotation="0 0 180"
-        scale="0.160 0.200 0.290"
-    ></a-cylinder>
-    
 
-    <a-entity position="-1.255 0.123 2.547" camera wasd-controls look-controls animation="property:position; to: 0 2.203 -0.068; dur: 10000;"
-    animation="position; 0 2.203 -0.068; to: -1.559 0.640 4.684; dur: 10000;"></a-entity>
-    
-    <a-entity position="-1.255 0.123 2.547" camera wasd-controls look-controls animation="property:position; 0 2.203 -0.068; to: -1.559 0.640 4.684; dur: 10000;"></a-entity>
-    
-  </a-scene>
-  </body>
+   <a-cylinder
+       position="-3.672 0.138 -7.154"
+       color="red"
+       rotation="0 0 180"
+       scale="0.160 0.200 0.290"
+   ></a-cylinder>
+  
+
+
+   <a-entity position="-1.255 0.123 2.547" camera wasd-controls look-controls animation="property:position; to: 0 2.203 -0.068; dur: 10000;"
+ ></a-entity>
+  
+  
+ </a-scene>
+ </body>
 </html>
+
+
+
